@@ -1,8 +1,60 @@
-.pic{
-    width: 150px;
-    border-radius: 50%;
-    float: left; 
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
 }
-.text{
-    font-size: 2em;
+.wrapper {
+  width: 150px;
+  height: 150px;
+  float: left;
+}
+.image {
+  width: 150px;
+  position: relative;
+}
+img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+}
+.content {
+  width: 150px;
+  height: 150px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0, 6s;
+}
+.content:hover {
+  border-radius: 50%;
+
+  opacity: 1;
+}
+.content p {
+  font-size: 10px;
+  color: #ffe100;
+  margin-bottom: 15px;
+}
+.content > * {
+  transform: translateY(25px);
+  transition: transform 0.6s;
+}
+.content :hover > * {
+  transform: translateY(0px);
+}
+
+.text {
+  font-size: 1em;
+}
+.wrapper-text {
+  margin: 100px;
+  padding: 66px;
 }
